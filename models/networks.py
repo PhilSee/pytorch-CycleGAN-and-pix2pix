@@ -590,7 +590,7 @@ class UnetSkipConnectionBlockTanh(nn.Module):
             norm_layer          -- normalization layer
             user_dropout (bool) -- if use dropout layers.
         """
-        super(UnetSkipConnectionBlock, self).__init__()
+        super(UnetSkipConnectionBlockTanh, self).__init__()
         self.outermost = outermost
         if type(norm_layer) == functools.partial:
             use_bias = norm_layer.func == nn.InstanceNorm2d
