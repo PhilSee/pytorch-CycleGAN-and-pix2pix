@@ -484,7 +484,7 @@ class UnetGeneratorTanh(nn.Module):
         We construct the U-Net from the innermost layer to the outermost layer.
         It is a recursive process.
         """
-        super(UnetGenerator, self).__init__()
+        super(UnetGeneratorTanh, self).__init__()
         # construct unet structure
         unet_block = UnetSkipConnectionBlockTanh(ngf * 8, ngf * 8, input_nc=None, submodule=None, norm_layer=norm_layer, innermost=True)  # add the innermost layer
         for i in range(num_downs - 5):          # add intermediate layers with ngf * 8 filters
