@@ -466,7 +466,8 @@ class UnetGenerator(nn.Module):
     def forward(self, input):
         """Standard forward"""
         return self.model(input)
-		
+
+
 class UnetGeneratorTanh(nn.Module):
     """Create a Unet-based generator with Tanh activations"""
 
@@ -567,8 +568,8 @@ class UnetSkipConnectionBlock(nn.Module):
             return self.model(x)
         else:   # add skip connections
             return torch.cat([x, self.model(x)], 1)
-			
-			
+            
+
 class UnetSkipConnectionBlockTanh(nn.Module):
     """Defines the Unet submodule with skip connection.
         X -------------------identity----------------------
