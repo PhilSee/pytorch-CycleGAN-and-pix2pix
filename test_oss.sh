@@ -1,0 +1,1 @@
+python test.py --dataroot ./datasets/oss --name oss_pix2pix --model pix2pix --which_direction BtoA --gpu_ids -1 --how_many 100 --phase val

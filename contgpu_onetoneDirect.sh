@@ -1,0 +1,3 @@
+# python -m visdom.server
+echo Setting epoch count to $1 ...
+python train.py --dataroot ./datasets/onetoneDirect --name onetoneDirect_pix2pix --model pix2pix --batch_size 30 --direction AtoB --epoch_count $1 --continue_train --gpu_ids 0 --print_freq 1 --display_id 0
